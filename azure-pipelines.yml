@@ -62,7 +62,7 @@ stages:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
               WebAppName: $(webAppName)
-              packageForLinux: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+              packageForLinux: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               RuntimeStack: 'NODE|18LTS'
               StartupCommand: 'npm run start'
               ScriptType: 'Inline Script'
